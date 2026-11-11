@@ -1,0 +1,5 @@
+// node tools/scan.js [a] [b] — draws every frame, reports exceptions, NaN paths and timing
+const load = require('./load.js'); const { createCanvas } = load; load(); const t0 = performance.now(); bakeAll(); console.log('bake ms', (performance.now() - t0) | 0);
+const cv = createCanvas(W, H), ctx = cv.getContext('2d'); const a = +(process.argv[2] || 0), b = +(process.argv[3] || NF - 1); let worst = 0, wf = 0, tot = 0, err = 0; const per = {};
+for (let f = a; f <= b; f++) { const t1 = performance.now(); try { drawFrame(ctx, f); } catch (e) { err++; if (err < 6) console.log('ERR frame', f, e.stack.split('\n').slice(0, 3).join(' | ')); } const d = performance.now() - t1; tot += d; const k = subAt(f).k; (per[k] = per[k] || []).push(d); if (d > worst && f > a + 2) { worst = d; wf = f; } }
+console.log('frames', b - a + 1, 'errors', err, 'avg ms', (tot / (b - a + 1)).toFixed(1), 'worst', worst.toFixed(0), '@', wf); console.log(Object.entries(per).map(([k, v]) => k + ':' + (v.reduce((x, y) => x + y, 0) / v.length).toFixed(0)).join('  '));

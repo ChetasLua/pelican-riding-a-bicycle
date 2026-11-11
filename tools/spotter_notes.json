@@ -1,0 +1,14 @@
+[
+ {"f":60,"what":"small white gulls glide in front of the cloud base through shots 1-3 (also 140, 228, 366, 432)","action":"ambient: foley seeds distant gull cries itself; no hard cue"},
+ {"f":276,"what":"confetti keeps fluttering for ~40 frames after each banner pop","action":"covered by the banner_pop sprinkle tail"},
+ {"f":292,"what":"each benchmark pelican is visibly falling for 12 frames before it lands (292, 380, 452, 532, 1356)","action":"ADDED to the log as `fall` events (toy slide-whistle ending on the land)"},
+ {"f":308,"what":"SQUARE-WHEELS does a small second hop after landing","action":"merged into the first beat-aligned clunk at 312"},
+ {"f":576,"what":"his head drops onto the handlebars (DEFEATED)","action":"ADDED: slump sigh at 576"},
+ {"f":716,"what":"foot goes down on the grass after the brake","action":"ADDED: footstep at 716"},
+ {"f":722,"what":"across the time-cut the bicycle is already leaning on the tree","action":"ADDED: soft `lean` clack at 722"},
+ {"f":960,"what":"a gull glides over the sea behind the trunk during the close-up","action":"left silent: the hold needs air"},
+ {"f":1166,"what":"the rear wheel blooms without a beak touch (the bloom wave reaches it)","action":"by design: `bloom` wheel 2 carries the string swell, no `touch`"},
+ {"f":1194,"what":"he straightens up from the bow","action":"ADDED: feather `rustle` at 1196 and a soft one at 1208"},
+ {"f":1250,"what":"NOODLE's legs paddle on fours through the parade","action":"covered by its toy chirps; no footsteps (would crowd the theme)"},
+ {"f":1264,"what":"dark birds turn against the sunset clouds for the whole shot","action":"ambient gulls only"}
+]
